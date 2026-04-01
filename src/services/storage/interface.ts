@@ -7,7 +7,7 @@ export interface StorageService{
     deleteDocument(documentId: string): Promise<void>;
 
     saveAnnotation(annotation: Annotation): Promise<void>;
-    getAnnotationsByDocument(documentId: string): Promise<Annotation[]>;
+    getAnnotations(documentId: string): Promise<Annotation[]>;
     deleteAnnotation(annotationId: string): Promise<void>;
 
     saveLabel(label: Label): Promise<void>;
@@ -15,6 +15,6 @@ export interface StorageService{
     deleteLabel(id: string): Promise<void>;
 
     saveChatMessage(message: ChatMessage): Promise<void>;
-    getChatHistrory(documentId: string): Promise<ChatMessage[]>;
+    getChatHistory(documentId: string): Promise<ChatMessage[]>;
     clearChatHistory(documentId: string): Promise<void>;
 }
