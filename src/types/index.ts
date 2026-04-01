@@ -1,3 +1,4 @@
+
 export interface Page{
     pageNumber: number;
     text: string;
@@ -17,4 +18,20 @@ export interface Document{
     fullText: string;
     metadata: DocumentMetadata;
     pages: Page[];
+}
+export interface Label{
+    id: string;
+    name: string;
+    color: string;
+    order: number;
+}
+export interface Annotation{
+    id: string;
+    documentId: string;
+    startIndex: number;
+    endIndex: number;
+    text: string;
+    labelId: string;
+    pageNumber: number;
+    createdAt: Date;
 }
