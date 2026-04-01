@@ -1,4 +1,4 @@
-
+//Document types
 export interface Page{
     pageNumber: number;
     text: string;
@@ -19,6 +19,7 @@ export interface Document{
     metadata: DocumentMetadata;
     pages: Page[];
 }
+//Label and Annotation types
 export interface Label{
     id: string;
     name: string;
@@ -33,5 +34,13 @@ export interface Annotation{
     text: string;
     labelId: string;
     pageNumber: number;
+    createdAt: Date;
+}
+// Chat and Conversation types
+export interface ChatMessage{
+    id: string
+    documentId: string;
+    role: 'user' | 'assistant';
+    content: string;
     createdAt: Date;
 }
